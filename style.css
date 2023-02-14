@@ -1,0 +1,31 @@
+#test {
+  color: gray;
+}
+
+body {background-color: #FEF5ED;}
+
+h1 {font-size: 1.5rem}
+select { position: absolute;
+    left: 40%;}
+
+
+.body {
+
+background-color: #D3E4CD;
+border: solid #393E46 2px;
+height: 40vh;
+position: relative;
+top: 20vh;
+padding: 2vw;
+}
+
+select {background-color: #ADC2A9;
+color: black;
+font-weight: 600;}
+
+h1{text-align: center;}
+button{
+background-color: #99A799;}
+
+#test {color: #393E46;
+font-weight: 650;}

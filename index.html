@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <title>Jonathan Lewis Design Lab</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="body">
+     <h1>Jonathan Lewis Design Lab</h1>
+
+     <div>
+        <label for="arm">Arm Style</label>
+        <select id="arm" name= "arm">
+           <option value= "track">Track</option>
+           <option value= "roll">Roll</option>
+           <option value= "flare">Flare</option>
+           <option value= "slopeTrack">Slope Track</option>
+           <option value= "slopeRoll">Slope Roll</option>
+           <option value= "slopeFlare">Slope Flaire</option>
+        </select>
+
+     <br>
+        <label for="ItemType">Item Type/ Direction</label>
+        
+        <select id="type" name="type"><br>
+
+           <option value="sofaPlus" name="type" id="sofaPlus">Sofa Plus</option>
+           <option value="sofa" name="type" id="Sofa">Sofa</option>
+           <option value="loftSofa" name="type" id="LoftSofa">Loft Sofa</option>
+           <option value="loveSeat" name="type" id="LoveSeat">Love Seat</option>
+           <option value="armChair" name="type" id="armChair"> Arm Chair</option>
+           <option value="ottoman">Ottoman</option>
+           <option value="cuddleChair">Cuddle Chair</option>
+           <option value="cuddleOttoman">Cuddle Ottoman</option>
+           <option value="armlessChair">Armless Chair</option>
+           <option value="armlessLoftSofa">Armless Loft Sofa</option>
+           <option value="cornerUnit">Corner</option>
+           <option value="cuddleCorner">Cuddle Corner</option>
+           <option value="1armChair">1 arm Chair</option>
+           <option value="1armCuddleChair">1 Arm Cuddle Chair</option>
+           <option value="1armChaise">1 Arm Chaise</option>
+           <option value="1armCuddleChaise">1 Arm Cuddle Chaise</option>
+           <option value="1armLoftSofa">1 Arm Loft Sofa</option>
+           <option value="1armBumperChaise">1 Arm Bumper Chaise</option>
+        </select><br>
+        <label for= "seatDepth">Seat Depth</label>
+        <select name="seatDepth" id="seatDepth">
+           <option value= "classic">Classic</option> 
+           <option value= "Deep">Deep</option>
+        </select><br>
+        <label for = "seatType">Seat Type</label>
+        <select name="seatType" id="seatType">
+           <option value="foam">Foam</option>
+            <option value="pumaPlush">Puma Plush</option>
+        </select><br>
+        <label for= "leg">Leg</label>
+        <select name= "leg" id="leg">
+           <option value="taperedWalnut">Tapered Walnut</option>
+           <option value="taperedCarbon">Tapered Carbon</option>
+           <option value="taperedNatural">Tapered Natural</option>
+           <option value="coneWalnut">Cone Walnut</option>
+           <option value="coneCarbon">Cone Carbon</option>
+           <option value="coneNatural">Cone Natural</option>
+           <option value="metalNickel">Metal Nickel</option>
+           <option value="metalCarbon">Metal Carbon</option>
+           <option value="metalBrass">Metal Brass</option>
+         </select><br>
+         <button type="submit" onclick="specialOrderCode()">submit</button>
+        
+
+
+
+     <div id="test"></div>
+     <p id="note"></p>
+   </div>
+  <script src="script.js"></script>
+</body>
+</html>
