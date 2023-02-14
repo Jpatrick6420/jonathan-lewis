@@ -17,6 +17,7 @@ height: 40vh;
 position: relative;
 top: 20vh;
 padding: 2vw;
+max-width: 800px;
 }
 
 select {background-color: #ADC2A9;
