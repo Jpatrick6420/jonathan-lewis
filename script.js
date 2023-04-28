@@ -98,7 +98,7 @@ case "1armBumperChaise" : unitPrice = "$644";
 break;
 }
 
-document.querySelector('#test').innerHTML = `Model: DL ${armstyle} ${itemType} ${depth} ${cushion} XX ${legType}. Price: ${unitPrice}`;
+document.querySelector('#test').innerHTML = `Model: DL ${armstyle} ${itemType} ${depth} ${cushion} XX ${legType}.`;
 
 document.querySelector('#note').innerHTML = "*Armless pieces always begin with DL 100 because there's no arm style"}
 
