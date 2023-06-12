@@ -23,7 +23,12 @@ function specialOrderCode(){
 // armstyle
 let armstyle = "";
 
-if (arm.value == "track") {armstyle = 100} else if (arm.value == "roll") {armstyle = 101} else if ( arm.value == "flare") {armstyle = 102} else if (arm.value == "slopeTrack") {armstyle= 105} else if (arm.value == "slopeRoll") {armstyle= 104} else if (arm.value == "slopeFlare") {armstyle= 103}
+if (arm.value == "track") {armstyle = 100} 
+else if (arm.value == "roll") {armstyle = 101}
+else if ( arm.value == "flare") {armstyle = 102} 
+else if (arm.value == "slopeTrack") {armstyle= 105} 
+else if (arm.value == "slopeRoll") {armstyle= 104} 
+else if (arm.value == "slopeFlare") {armstyle= 103}
 
 
 
@@ -37,8 +42,26 @@ if (arm.value == "track") {armstyle = 100} else if (arm.value == "roll") {armsty
 
 let itemType ='';
 
-if (type.value == 'sofaPlus') {itemType = '-70xx' ;} else if (type.value == 'sofa') {itemType = '-30xx';} else if (type.value == 'loftSofa') {itemType = '-60xx';} else if (type.value == 'loveSeat') {itemType = '-20xx';} else if (type.value == 'armChair') {itemType = '-01xx';} else if (type.value == 'ottoman') {itemType = '-02xx';} else if (type.value == 'cuddleChair') {itemType = '-00xx';} else if (type.value == 'cuddleOttoman') {itemType = '-38xx';} else if (type.value == 'armlessChair') {itemType = '-10xx';} else if (type.value == 'armlessLoftSofa') {itemType = '-03xx';} else if (type.value == 'cornerUnit') {itemType = '-15xx';} else if (type.value == 'cuddleCorner') {itemType = '-11xx';} else if (type.value == '1armChair') {itemType = '-04LF/RF';} else if (type.value == '1armCuddleChair') {itemType = '-74LF/RF';} else if (type.value == '1armChaise') {itemType = '-82LF/RF';} else if (type.value == '1armCuddleChaise') {itemType = '-80LF/RF';} else if (type.value == '1armLoftSofa') {itemType = '-26LF/RF';} else if (type.value == '1armBumperChaise') {itemType = '-13LF/RF';}
+if (type.value == 'sofaPlus') 
+{itemType = '-70xx' ;} 
+else if (type.value == 'sofa') 
+{itemType = '-30xx';} 
+else if (type.value == 'loftSofa')
+{itemType = '-60xx';}
+else if (type.value == 'loveSeat')
+{itemType = '-20xx';}
+else if (type.value == 'armChair')
+{itemType = '-01xx';} 
+else if (type.value == 'ottoman')
+{itemType = '-02xx';} 
+else if (type.value == 'cuddleChair')
+{itemType = '-00xx';} 
+else if (type.value == 'cuddleOttoman')
+{itemType = '-38xx';}
+else if (type.value == 'armlessChair') {itemType = '-10xx';} else if (type.value == 'armlessLoftSofa') {itemType = '-03xx';} else if (type.value == 'cornerUnit') {itemType = '-15xx';} else if (type.value == 'cuddleCorner') {itemType = '-11xx';} else if (type.value == '1armChair') {itemType = '-04LF/RF';} else if (type.value == '1armCuddleChair') {itemType = '-74LF/RF';} else if (type.value == '1armChaise') {itemType = '-82LF/RF';} else if (type.value == '1armCuddleChaise') {itemType = '-80LF/RF';} else if (type.value == '1armLoftSofa') {itemType = '-26LF/RF';} else if (type.value == '1armBumperChaise') {itemType = '-13LF/RF';}
 
+
+  
 //depth
 
 let depth ="";
