@@ -1,127 +1,214 @@
-
-  
-
 const arm = document.getElementById('arm');
-
 const type = document.getElementById('type');
-
 const seatDepth = document.getElementById('seatDepth');
-
 const seatType = document.getElementById('seatType');
-
 const leg = document.getElementById('leg');
-
 const submit = document.getElementById('submit');
 
+function specialOrderCode() {
 
+    document.querySelector('#test').innerHTML = `Model: DL ${armStyle(arm.value)} 
+    ${itemType(type.value)} 
+    ${sofaDepth(seatDepth.value)} 
+    ${cushionStyle(seatType.value)} 
+    XX 
+    ${legType(leg.value)}.`;
+    document.getElementById('price').innerHTML = unitPrice(seatType.value);
 
-
-
-
-function specialOrderCode(){
-
-// armstyle
-let armstyle = "";
-
-if (arm.value == "track") {armstyle = 100} 
-else if (arm.value == "roll") {armstyle = 101}
-else if ( arm.value == "flare") {armstyle = 102} 
-else if (arm.value == "slopeTrack") {armstyle= 105} 
-else if (arm.value == "slopeRoll") {armstyle= 104} 
-else if (arm.value == "slopeFlare") {armstyle= 103}
-
-
-
-
-
-
-
-
-
-//itemType
-
-let itemType ='';
-
-if (type.value == 'sofaPlus') 
-{itemType = '-70xx' ;} 
-else if (type.value == 'sofa') 
-{itemType = '-30xx';} 
-else if (type.value == 'loftSofa')
-{itemType = '-60xx';}
-else if (type.value == 'loveSeat')
-{itemType = '-20xx';}
-else if (type.value == 'armChair')
-{itemType = '-01xx';} 
-else if (type.value == 'ottoman')
-{itemType = '-02xx';} 
-else if (type.value == 'cuddleChair')
-{itemType = '-00xx';} 
-else if (type.value == 'cuddleOttoman')
-{itemType = '-38xx';}
-else if (type.value == 'armlessChair') {itemType = '-10xx';} else if (type.value == 'armlessLoftSofa') {itemType = '-03xx';} else if (type.value == 'cornerUnit') {itemType = '-15xx';} else if (type.value == 'cuddleCorner') {itemType = '-11xx';} else if (type.value == '1armChair') {itemType = '-04LF/RF';} else if (type.value == '1armCuddleChair') {itemType = '-74LF/RF';} else if (type.value == '1armChaise') {itemType = '-82LF/RF';} else if (type.value == '1armCuddleChaise') {itemType = '-80LF/RF';} else if (type.value == '1armLoftSofa') {itemType = '-26LF/RF';} else if (type.value == '1armBumperChaise') {itemType = '-13LF/RF';}
-
-
-  
-//depth
-
-let depth ="";
-
-if (seatDepth.value == "classic") {depth = "C"} else {depth = "D"}
-
-//cushion
-
-let cushion ="";
-
-if (seatType.value == "foam") {cushion = "F"} else {cushion= "P"}
-
-//leg
-
-let legType ="";
-
-if (leg.value == 'taperedWalnut') {legType = 'A';} else if (leg.value == 'taperedCarbon') {legType = 'C';} else if (leg.value == 'taperedNatural') {legType = 'B';} else if (leg.value == 'coneWalnut') {legType = 'D';} else if (leg.value == 'coneCarbon') {legType = 'F';} else if (leg.value == 'coneNatural') {legType = 'E';} else if (leg.value == 'metalNickel') {legType = 'G';}else if (leg.value == 'metalCarbon') {legType = 'I';} else if (leg.value == 'metalBrass') {legType = 'H';}
-
-
-let unitPrice;
-
-switch (type.value){
-case "sofaPlus": unitPrice = "$1147"; break;
-case "sofa" : unitPrice = "$1026";
-break;
-case "loftSofa" : unitPrice = "$1002";
-break;
-case "loveSeat" : unitPrice = "$978";
-break;
-case "armChair": unitPrice = "$809";
-break;
-case "ottoman" : unitPrice = "$314";
-break;
-case "cuddleChair" : unitPrice = "881";
-break;
-case "cuddleOttoman": unitPrice = "$350";
-break;
-case "armlessChair" : unitPrice = "$543";
-break;
-case "armlessLoftSofa" : unitPrice = "$785";
-break;
-case "cornerUnit": unitPrice = "$604";
-break;
-case "cuddleCorner" : unitPrice = "$785";
-break;
-case "1armChair" : unitPrice = "$604";
-break;
-case "1armCuddleChair": unitPrice = "$664";
-break;
-case "1armChaise" : unitPrice = "$833";
-break;
-case "1armCuddleChaise" : unitPrice = "906";
-break;
-case "1armLoffSofa": unitPrice = "$833";
-break;
-case "1armBumperChaise" : unitPrice = "$644";
-break;
+    document.querySelector('#note').innerHTML = "*Armless pieces always begin with DL 100 because there's no arm style"
 }
 
-document.querySelector('#test').innerHTML = `Model: DL ${armstyle} ${itemType} ${depth} ${cushion} XX ${legType}.`;
+function armStyle(style) {
+    let armStyleCode;
 
-document.querySelector('#note').innerHTML = "*Armless pieces always begin with DL 100 because there's no arm style"}
+    switch (style) {
 
+        case "track": armStyleCode = 100; break;
+        case "roll": armStyleCode = 101; break;
+        case "flare": armStyleCode = 102; break;
+        case "slopeTrack": armStyleCode = 105; break;
+        case "slopeRoll": armStyleCode = 104; break;
+        case "slopeFlare": armStyleCode = 103; break;
+        default: console.log(arm.value + "was selected");
+    }
+    return armStyleCode
+}
+
+function itemType(style) {
+
+    let itemType = '';
+
+    switch (style) {
+        case "sofaPlus": itemType = "-70xx"; break;
+        case 'sofa': itemType = '-30xx'; break;
+        case 'loftSofa': itemType = '-60xx'; break;
+        case 'loveSeat': itemType = '-20xx'; break;
+        case 'armChair': itemType = '-01xx'; break;
+        case 'ottoman': itemType = '-02xx'; break;
+        case 'cuddleChair': itemType = '-00xx'; break;
+        case 'cuddleOttoman': itemType = '-38xx'; break;
+        case 'armlessChair': itemType = '-10xx'; break;
+        case 'armlessLoftSofa': itemType = '-03xx'; break;
+        case 'cornerUnit': itemType = '-15xx'; break;
+        case 'cuddleCorner': itemType = '-11xx'; break;
+        case '1armChair': itemType = '-04LF/RF'; break;
+        case '1armCuddleChair': itemType = '-74LF/RF'; break;
+        case '1armChaise': itemType = '-82LF/RF'; break;
+        case '1armCuddleChaise': itemType = '-80LF/RF'; break;
+        case '1armLoftSofa': itemType = '-26LF/RF'; break;
+        case '1armBumperChaise': itemType = '-13LF/RF'; break;
+        default: console.log("there was no arm item type selected")
+
+    }
+    return itemType;
+
+}
+
+function sofaDepth(style) {
+    let depth = "";
+
+    if (style == "classic") { depth = "C" } else { depth = "D" }
+
+    return depth;
+}
+function cushionStyle(style) {
+    let cushion = "";
+
+    if (style == "foam") { cushion = "F" } else { cushion = "P" }
+    return cushion;
+}
+
+function legType(style) {
+    let legType = "";
+
+    switch (style) {
+        case 'taperedWalnut': legType = 'A'; break;
+        case 'taperedCarbon': legType = 'C'; break;
+        case 'taperedNatural': legType = 'B'; break;
+        case 'coneWalnut': legType = 'D'; break;
+        case 'coneCarbon': legType = 'F'; break;
+        case 'coneNatural': legType = 'E'; break;
+        case 'metalNickel': legType = 'G'; break;
+        case 'metalCarbon': legType = 'I'; break;
+        case 'metalBrass': legType = 'H'; break;
+    }
+    return legType;
+}
+
+function unitPrice(cushionType) {
+    let unitPrice;
+
+
+    if (type.value === "sofaPlus" && cushionStyle(cushionType) === "F") {
+        unitPrice = "$1147";
+    }
+    else if (type.value === "sofaPlus" && cushionStyle(cushionType) === "P") {
+        unitPrice = "$1570"
+    }
+    else if (type.value === "sofa" && cushionStyle(cushionType) === "F") {
+        unitPrice = "$1026"
+    }
+    else if (type.value === "sofa" && cushionStyle(cushionType) === "P") {
+        unitPrice = "$1449"
+    }
+    else if (type.value === "loftSofa" && cushionStyle(cushionType) === "F") {
+        unitPrice = "$1002"
+    }
+    else if (type.value === "loftSofa" && cushionStyle(cushionType) === "P") {
+        unitPrice = "$1328"
+    }
+    else if (type.value === "loveSeat" && cushionStyle(cushionType) === "F") {
+        unitPrice = "$978"
+    }
+    else if (type.value === "loveSeat" && cushionStyle(cushionType) === "P") {
+        unitPrice = "$1244"
+    }
+    else if (type.value === "armChair" && cushionStyle(cushionType) === "F") {
+        unitPrice = "$809"
+    }
+    else if (type.value === "armChair" && cushionStyle(cushionType) === "P") {
+        unitPrice = "$966"
+    }
+    else if (type.value === "ottoman" && cushionStyle(cushionType) === "F") {
+        unitPrice = "$314"
+    }
+    else if (type.value === "ottoman" && cushionStyle(cushionType) === "P") {
+        unitPrice = "$471"
+    }
+
+    else if (type.value === "cuddleChair" && cushionStyle(cushionType) === "F") {
+        unitPrice = "$881"
+    }
+    else if (type.value === "cuddleChair" && cushionStyle(cushionType) === "P") {
+        unitPrice = "$1111"
+    }
+    else if (type.value === "cuddleOttoman" && cushionStyle(cushionType) === "F") {
+        unitPrice = "$350"
+    }
+    else if (type.value === "cuddleOttoman" && cushionStyle(cushionType) === "P") {
+        unitPrice = "$507"
+    }
+    else if (type.value === "armlessChair" && cushionStyle(cushionType) === "F") {
+        unitPrice = "$543"
+    }
+    else if (type.value === "armlessChair" && cushionStyle(cushionType) === "P") {
+        unitPrice = "$700"
+    }
+    else if (type.value === "armlessLoftSofa" && cushionStyle(cushionType) === "F") {
+        unitPrice = "$785"
+    }
+    else if (type.value === "armlessLoftSofa" && cushionStyle(cushionType) === "P") {
+        unitPrice = "$1051"
+    }
+    else if (type.value === "cornerUnit" && cushionStyle(cushionType) === "F") {
+        unitPrice = "$604"
+    }
+    else if (type.value === "cornerUnit" && cushionStyle(cushionType) === "P") {
+        unitPrice = "$833"
+    }
+    else if (type.value === "cuddleCorner" && cushionStyle(cushionType) === "F") {
+        unitPrice = "$785"
+    }
+    else if (type.value === "cuddleCorner" && cushionStyle(cushionType) === "P") {
+        unitPrice = "$1051"
+    }
+    else if (type.value === "1armChair" && cushionStyle(cushionType) === "F") {
+        unitPrice = "$604"
+    }
+    else if (type.value === "1armChair" && cushionStyle(cushionType) === "P") {
+        unitPrice = "$833"; cushionType
+    }
+    else if (type.value === "1armCuddleChair" && cushionStyle(cushionType) === "F") {
+        unitPrice = "$664"
+    }
+    else if (type.value === "1armCuddleChair" && cushionStyle(cushionType) === "P") {
+        unitPrice = "$894"
+    }
+    else if (type.value === "1armChaise" && cushionStyle(cushionType) === "F") {
+        unitPrice = "$833"
+    }
+    else if (type.value === "1armChaise" && cushionStyle(cushionType) === "P") {
+        unitPrice = "$1099"
+    }
+    else if (type.value === "1armCuddleChaise" && cushionStyle(cushionType) === "F") {
+        unitPrice = "$906"
+    }
+    else if (type.value === "1armCuddleChaise" && cushionStyle(cushionType) === "P") {
+        unitPrice = "$1232"
+    }
+    else if (type.value === "1armLoftSofa" && cushionStyle(cushionType) === "F") {
+        unitPrice = "$833"
+    }
+    else if (type.value === "1armLoftSofa" && cushionStyle(cushionType) === "P") {
+        unitPrice = "$1099"
+    }
+    else if (type.value === "1armBumperChaise" && cushionStyle(cushionType) === "F") {
+        unitPrice = "$664"
+    }
+    else if (type.value === "1armBumperChaise" && cushionStyle(cushionType) === "P") {
+        unitPrice = "$978"
+    }
+    else { console.log(itemType(styleType) + cushionStyle(cushionType)) }
+
+    return unitPrice;
+}
