@@ -5,6 +5,8 @@ const seatType = document.getElementById('seatType');
 const leg = document.getElementById('leg');
 const submit = document.getElementById('submit');
 
+const showMessage = message => console.log(message);
+
 function specialOrderCode() {
 
     document.querySelector('#test').innerHTML = `Model: DL ${armStyle(arm.value)} 
@@ -57,7 +59,7 @@ function itemType(style) {
         case '1armCuddleChaise': itemType = '-80LF/RF'; break;
         case '1armLoftSofa': itemType = '-26LF/RF'; break;
         case '1armBumperChaise': itemType = '-13LF/RF'; break;
-        default: console.log("there was no arm item type selected")
+        default: showMessage("there was no arm item type selected");
 
     }
     return itemType;
@@ -130,10 +132,10 @@ function unitPrice(cushionType) {
     else if (type.value === "armChair" && cushionStyle(cushionType) === "P") {
         unitPrice = "$966"
     }
-    else if (type.value === " ottoman" && cushionStyle(cushionType) === "F") {
+    else if (type.value === "ottoman" && cushionStyle(cushionType) === "F") {
         unitPrice = "$314"
     }
-    else if (type.value === " ottoman" && cushionStyle(cushionType) === "P") {
+    else if (type.value === "ottoman" && cushionStyle(cushionType) === "P") {
         unitPrice = "$471"
     }
 
