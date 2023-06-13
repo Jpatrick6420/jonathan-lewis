@@ -71,12 +71,7 @@ function sofaDepth(style) {
 
     return depth;
 }
-function cushionStyle(style) {
-    let cushion = "";
 
-    if (style == "foam") { cushion = "F" } else { cushion = "P" }
-    return cushion;
-}
 
 function legType(style) {
     let legType = "";
@@ -95,6 +90,12 @@ function legType(style) {
     return legType;
 }
 
+function cushionStyle(style) {
+    let cushion = "";
+
+    if (style == "foam") { cushion = "F" } else { cushion = "P" }
+    return cushion;
+}
 function unitPrice(cushionType) {
     let unitPrice;
 
@@ -129,10 +130,10 @@ function unitPrice(cushionType) {
     else if (type.value === "armChair" && cushionStyle(cushionType) === "P") {
         unitPrice = "$966"
     }
-    else if (type.value === "ottoman" && cushionStyle(cushionType) === "F") {
+    else if (type.value === " ottoman" && cushionStyle(cushionType) === "F") {
         unitPrice = "$314"
     }
-    else if (type.value === "ottoman" && cushionStyle(cushionType) === "P") {
+    else if (type.value === " ottoman" && cushionStyle(cushionType) === "P") {
         unitPrice = "$471"
     }
 
@@ -176,7 +177,7 @@ function unitPrice(cushionType) {
         unitPrice = "$604"
     }
     else if (type.value === "1armChair" && cushionStyle(cushionType) === "P") {
-        unitPrice = "$833"; cushionType
+        unitPrice = "$833";
     }
     else if (type.value === "1armCuddleChair" && cushionStyle(cushionType) === "F") {
         unitPrice = "$664"
