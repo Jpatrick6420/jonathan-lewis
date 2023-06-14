@@ -46,7 +46,7 @@ function itemType(style) {
         case 'loftSofa': itemType = '-60xx'; break;
         case 'loveSeat': itemType = '-20xx'; break;
         case 'armChair': itemType = '-01xx'; break;
-        case ' ottoman': itemType = '-02xx'; break;
+        case 'ottoman': itemType = '-02xx'; break;
         case 'cuddleChair': itemType = '-00xx'; break;
         case 'cuddleOttoman': itemType = '-38xx'; break;
         case 'armlessChair': itemType = '-10xx'; break;
